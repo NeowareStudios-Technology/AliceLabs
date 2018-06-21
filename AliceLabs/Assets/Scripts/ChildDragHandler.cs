@@ -28,7 +28,6 @@ public class ChildDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
         else
         {
-            Parent.transform.localPosition = Vector3.zero;
             Debug.Log("Drop");
         }
     }

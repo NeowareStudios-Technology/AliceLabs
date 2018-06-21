@@ -8,8 +8,20 @@ public class Textspawner : MonoBehaviour, IEndDragHandler, IPointerDownHandler
 
     public GameObject PrefabObject;
     public GameObject Page;
-    private GameObject newObject;
+    private GameObject newObject = null;
     bool spawned = false;
+
+    public void Update()
+    {
+        if (Input.GetMouseButton(0) && newObject)
+        {
+            newObject.transform.position = Input.mousePosition;
+        }
+        if (Input.GetMouseButtonUp(0) && newObject)
+        {
+            newObject = null;
+        }
+    }
 
     public void Clicked(){
         newObject = Instantiate(PrefabObject, Input.mousePosition,Quaternion.identity);

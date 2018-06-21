@@ -11,12 +11,14 @@ public class draggable : MonoBehaviour, IDragHandler, IEndDragHandler
     public bool Right;
     public RectTransform parent;
     public GameObject startPosition;
+    public RectTransform Page;
     private float diffx;
     private float diffy;
     private bool startedDrag = false;
 	public void Start()
 	{
         startPosition.transform.position = transform.position;
+        Page = GameObject.FindGameObjectWithTag("Page").GetComponent<RectTransform>();
         //lastMouse.position.Set(Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z);
 	}
 
@@ -27,7 +29,7 @@ public class draggable : MonoBehaviour, IDragHandler, IEndDragHandler
             startedDrag = true;
             GetComponent<Image>().color = Color.clear;
         }
-        transform.position = Input.mousePosition;
+        transform.position = SnappedLocation(Input.mousePosition);
         diffx = startPosition.transform.position.x - transform.position.x;
         diffy = startPosition.transform.position.y - transform.position.y;
         if (Top && Right)
@@ -54,6 +56,19 @@ public class draggable : MonoBehaviour, IDragHandler, IEndDragHandler
 
 
 		
+    }
+
+    private Vector3 SnappedLocation(Vector3 clickPoint)
+    {
+        float x = clickPoint.x;
+        float y = clickPoint.y;
+        float z = clickPoint.z;
+        float gridh = Page.rect.height / 10f;
+        float gridw = Page.rect.width / 10f;
+        x = Mathf.FloorToInt(x / gridw) * gridw;
+        y = Mathf.FloorToInt(y / gridh) * gridh;
+        z = Mathf.FloorToInt(z / 1f) * 1f;
+        return new Vector3(x, y, z);
     }
 
     public void OnEndDrag(PointerEventData eventData)

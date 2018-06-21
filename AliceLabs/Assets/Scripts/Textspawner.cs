@@ -28,6 +28,9 @@ public class Textspawner : MonoBehaviour, IEndDragHandler, IPointerDownHandler
         spawned = true;
         newObject.GetComponent<ItemDragHandler>().Page = Page.transform as RectTransform;
 		newObject.transform.SetParent(Page.transform);
+        RectTransform rt = newObject.GetComponent<RectTransform>();
+        RectTransform pt = Page.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(pt.rect.width/5f,pt.rect.height/10f);
     }
 
 

@@ -16,7 +16,9 @@ public class ChildDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        Parent.transform.position = Input.mousePosition;
+        Debug.Log("snap");
+        transform.position = SnappedLocation(Input.mousePosition);
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -30,5 +32,17 @@ public class ChildDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             Debug.Log("Drop");
         }
+    }
+    private Vector3 SnappedLocation(Vector3 clickPoint)
+    {
+        float x = clickPoint.x;
+        float y = clickPoint.y;
+        float z = clickPoint.z;
+        float gridh = Page.rect.height / 10f;
+        float gridw = Page.rect.width / 10f;
+        x = Mathf.FloorToInt(x / gridw) * gridw;
+        y = Mathf.FloorToInt(y / gridh) * gridh;
+        z = Mathf.FloorToInt(z / 1f) * 1f;
+        return new Vector3(x, y, z);
     }
 }

@@ -12,7 +12,26 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler {
 	}
 	public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+       
+            Debug.Log("snap");
+            transform.position = SnappedLocation(Input.mousePosition);
+        
+        
+   
+            //transform.position = Input.mousePosition;
+    }
+
+    private Vector3 SnappedLocation(Vector3 clickPoint)
+    {
+        float x = clickPoint.x;
+        float y = clickPoint.y;
+        float z = clickPoint.z;
+        float gridh = Page.rect.height / 10f;
+        float gridw = Page.rect.width / 10f;
+        x = Mathf.FloorToInt(x / gridw) * gridw;
+        y = Mathf.FloorToInt(y / gridh) * gridh;
+        z = Mathf.FloorToInt(z / 1f) * 1f;
+        return new Vector3(x, y, z);
     }
 
     public void OnEndDrag(PointerEventData eventData)

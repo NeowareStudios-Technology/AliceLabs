@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\ItemDragHandler.cs" />
     <Compile Include="Assets\Scripts\ItemDropHandler.cs" />
     <Compile Include="Assets\Scripts\Textspawner.cs" />
+    <Compile Include="Assets\snapGrid.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity/AliceLabs1/AliceLabs/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

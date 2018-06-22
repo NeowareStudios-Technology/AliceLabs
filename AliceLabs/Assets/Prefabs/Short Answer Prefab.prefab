@@ -378,6 +378,8 @@ MonoBehaviour:
   Right: 1
   parent: {fileID: 224154123983919628}
   startPosition: {fileID: 1666330392615250}
+  Page: {fileID: 0}
+  OverEdge: 0
 --- !u!114 &114138239746731638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -447,6 +449,8 @@ MonoBehaviour:
   Right: 0
   parent: {fileID: 224154123983919628}
   startPosition: {fileID: 1222041201053108}
+  Page: {fileID: 0}
+  OverEdge: 0
 --- !u!114 &114298122142248116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,6 +466,8 @@ MonoBehaviour:
   Right: 0
   parent: {fileID: 224154123983919628}
   startPosition: {fileID: 1332435759804380}
+  Page: {fileID: 0}
+  OverEdge: 0
 --- !u!114 &114339139385122506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -473,7 +479,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e32d767a422644a8757cbe3f4ab5ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TL: {fileID: 114298122142248116}
+  BL: {fileID: 114276433679851516}
+  TR: {fileID: 114089774533285536}
+  BR: {fileID: 114779475790525720}
   Page: {fileID: 0}
+  rt: {fileID: 0}
 --- !u!114 &114366430837898268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -785,6 +796,8 @@ MonoBehaviour:
   Right: 1
   parent: {fileID: 224154123983919628}
   startPosition: {fileID: 1757491518466648}
+  Page: {fileID: 0}
+  OverEdge: 0
 --- !u!114 &114982271606018562
 MonoBehaviour:
   m_ObjectHideFlags: 1

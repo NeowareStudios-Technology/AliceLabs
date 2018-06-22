@@ -17,7 +17,7 @@ public class ChildDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("snap");
-        transform.position = SnappedLocation(Input.mousePosition);
+        Parent.transform.position = SnappedLocation(Input.mousePosition);
 
     }
 
@@ -38,8 +38,8 @@ public class ChildDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         float x = clickPoint.x;
         float y = clickPoint.y;
         float z = clickPoint.z;
-        float gridh = Page.rect.height / 10f;
-        float gridw = Page.rect.width / 10f;
+        float gridh = Page.rect.height / 20f;
+        float gridw = Page.rect.width / 20f;
         x = Mathf.FloorToInt(x / gridw) * gridw;
         y = Mathf.FloorToInt(y / gridh) * gridh;
         z = Mathf.FloorToInt(z / 1f) * 1f;

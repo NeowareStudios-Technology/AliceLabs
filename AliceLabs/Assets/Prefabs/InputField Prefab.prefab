@@ -303,7 +303,6 @@ MonoBehaviour:
   BR: {fileID: 114682762628060174}
   Page: {fileID: 0}
   rt: {fileID: 224441472493618764}
-  dummyObject: {fileID: 0}
 --- !u!114 &114265828553682290
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -109,10 +109,13 @@
     <Compile Include="Assets\PolyToolkit\Scripts\PolyTypes.cs" />
     <Compile Include="Assets\PolyToolkit\Scripts\PtAsset.cs" />
     <Compile Include="Assets\PolyToolkit\Scripts\PtAssetObject.cs" />
+    <Compile Include="Assets\polyURLHolder.cs" />
     <Compile Include="Assets\Scripts\ChildDragHandler.cs" />
     <Compile Include="Assets\Scripts\draggable.cs" />
+    <Compile Include="Assets\Scripts\importPolyThumbnails.cs" />
     <Compile Include="Assets\Scripts\ItemDragHandler.cs" />
     <Compile Include="Assets\Scripts\ItemDropHandler.cs" />
+    <Compile Include="Assets\Scripts\polySelector.cs" />
     <Compile Include="Assets\Scripts\snapGrid.cs" />
     <Compile Include="Assets\Scripts\Textspawner.cs" />
     <None Include="Assets\PolyToolkit\Internal\tbt\Brushes\Basic\Bubbles\Bubbles.shader" />
@@ -367,6 +370,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>E:/Unity/AliceLabs1/AliceLabs/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Alex/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -375,9 +381,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Alex/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>E:/Unity/AliceLabs1/AliceLabs/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
